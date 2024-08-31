@@ -1,0 +1,233 @@
+<html><head><base href="https://www.brocanteenchantee.com/#contact">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - La Brocante Enchantée</title>
+<style>
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  nav {
+    background-color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  #contact {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .contact-item {
+    flex-basis: calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
+
+  .contact-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-item p {
+    margin: 0;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #c0392b;
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .contact-item {
+      flex-basis: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>La Brocante Enchantée</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/#services">Nos Services</a></li>
+      <li><a href="/produits.html">Produits</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <h3>Adresse</h3>
+          <p>123 Rue de la Brocante</p>
+          <p>75000 Paris, France</p>
+        </div>
+        <div class="contact-item">
+          <h3>Téléphone</h3>
+          <p>+33 1 23 45 67 89</p>
+        </div>
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>contact@brocanteenchantee.com</p>
+        </div>
+        <div class="contact-item">
+          <h3>Horaires</h3>
+          <p>Du mardi au samedi : 10h - 19h</p>
+          <p>Dimanche : 14h - 18h</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 La Brocante Enchantée - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Ici, vous pouvez ajouter le code pour envoyer le formulaire à votre backend
+      // Par exemple, en utilisant fetch() ou XMLHttpRequest
+
+      alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<html><head><base href="https://www.brocanteenchantee.com/produits.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Produits - La Brocante Enchantée</title>
+<style>
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  nav {
+    background-color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product-info {
+    padding: 1rem;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+  }
+
+  .product-price {
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+
+  .category-filter {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .category-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .category-btn:hover,
+  .category-btn.active {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>La Brocante Enchantée</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/#services">Nos Services</a></li>
+      <li><a href="/produits.html">Produits</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h2>Nos Trésors de Brocante</h2>
+    
+    <div class="category-filter">
+      <button class="category-btn active" data-category="all">Tous</button>
+      <button class="category-btn" data-category="meubles">Meubles</button>
+      <button class="category-btn" data-category="decoration">Décoration</button>
+      <button class="category-btn" data-category="vintage">Vintage</button>
+      <button class="category-btn" data-category="bijoux">Bijoux</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Les produits seront ajoutés ici dynamiquement par JavaScript -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 La Brocante Enchantée - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const products = [
+      {
+        name: "Commode Louis XV",
+        price: "850 €",
+        description: "Magnifique commode d'époque Louis XV en bois de rose",
+        image: "https://example.com/commode-louis-xv.jpg",
+        category: "meubles"
+      },
+      {
+        name: "Miroir Art Déco",
+        price: "320 €",
+        description: "Élégant miroir Art Déco des années 1930",
+        image: "https://example.com/miroir-art-deco.jpg",
+        category: "decoration"
+      },
+      {
+        name: "Radio Vintage",
+        price: "180 €",
+        description: "Radio des années 60 en parfait état de fonctionnement",
+        image: "https://example.com/radio-vintage.jpg",
+        category: "vintage"
+      },
+      {
+        name: "Collier Art Nouveau",
+        price: "450 €",
+        description: "Superbe collier Art Nouveau en argent et améthyste",
+        image: "https://example.com/collier-art-nouveau.jpg",
+        category: "bijoux"
+      },
+      {
+        name: "Table Basse Scandinave",
+        price: "290 €",
+        description: "Table basse design scandinave des années 50",
+        image: "https://example.com/table-basse-scandinave.jpg",
+        category: "meubles"
+      },
+      {
+        name: "Lampe Tiffany",
+        price: "580 €",
+        description: "Authentique lampe Tiffany début 20ème siècle",
+        image: "https://example.com/lampe-tiffany.jpg",
+        category: "decoration"
+      },
+      {
+        name: "Appareil Photo Rétro",
+        price: "150 €",
+        description: "Appareil photo argentique des années 70",
+        image: "https://example.com/appareil-photo-retro.jpg",
+        category: "vintage"
+      },
+      {
+        name: "Broche Art Déco",
+        price: "280 €",
+        description: "Élégante broche Art Déco en or et diamants",
+        image: "https://example.com/broche-art-deco.jpg",
+        category: "bijoux"
+      }
+    ];
+
+    function createProductCard(product) {
+      return `
+        <div class="product-card" data-category="${product.category}">
+          <img class="product-image" src="${product.image}" alt="${product.name}" width="250" height="200">
+          <div class="product-info">
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-price">${product.price}</p>
+            <p class="product-description">${product.description}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function displayProducts(category = 'all') {
+      const productsGrid = document.getElementById('productsGrid');
+      productsGrid.innerHTML = '';
+      
+      products.forEach(product => {
+        if (category === 'all' || product.category === category) {
+          productsGrid.innerHTML += createProductCard(product);
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      displayProducts();
+
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          displayProducts(button.dataset.category);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

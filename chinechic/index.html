@@ -1,0 +1,257 @@
+<html><head><base href="https://www.brocanteenchantee.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Brocante Enchantée - Votre Spécialiste en Objets Anciens</title>
+<style>
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  nav {
+    background-color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    background-image: url('https://example.com/brocante-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #c0392b;
+  }
+
+  .section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-card i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      height: 300px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>La Brocante Enchantée</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="nosServices.html">Nos Services</a></li>
+      <li><a href="/produits.html">Produits</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <section id="accueil" class="hero">
+      <div class="hero-content">
+        <h2>Bienvenue chez La Brocante Enchantée</h2>
+        <p>Découvrez des trésors uniques et donnez une nouvelle vie aux objets anciens</p>
+        <a href="/produits.html" class="btn">Explorez nos trésors</a>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Nos Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-search"></i>
+          <h3>Estimation</h3>
+          <p>Faites estimer vos objets anciens par nos experts passionnés</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-store"></i>
+          <h3>Vente</h3>
+          <p>Vendez vos trésors ou trouvez la pièce unique qui vous manque</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-hands-helping"></i>
+          <h3>Conseil</h3>
+          <p>Bénéficiez de nos conseils pour restaurer et mettre en valeur vos objets</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contactez-nous</h2>
+      <p>N'hésitez pas à nous contacter pour toute question ou demande d'estimation.</p>
+      <p>Email: <a href="mailto:contact@brocanteenchantee.com">contact@brocanteenchantee.com</a></p>
+      <p>Téléphone: <a href="tel:+33123456789">01 23 45 67 89</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 La Brocante Enchantée - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (link.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
